@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon site → Graphiques Dynamiques</title>
+    <link rel="icon" href="image/Kirby.png" type="image/png">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/graphique.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/graphique.js" defer></script>
+
+</head>
+<body>
+
+<header class="header-title">
+  <div class="header-container">
+    <a href="https://soeman.fr/" target="_blank" class="logo"><img src="//tech-ethic.com/wp-content/uploads/2024/08/SoemanGroup_logo-principal_Web.png" alt="soeman_group" class="logo"></a>
+    <h1>Statistiques</h1>
+  </div>
+</header>
+
+<div id="nav"></div>
+
+  <main>
+    <form id="chartForm">
+      <input type="text" id="chartName" placeholder="Nom du graphique" required />
+      <select id="chartType">
+        <option value="bar">Barres</option>
+        <option value="line">Lignes</option>
+        <option value="pie">Camembert</option>
+        <option value="doughnut">Donut</option>
+      </select>
+      <button type="submit">Créer un graphique</button>
+      <button type="button" id="deleteAll">Supprimer tous les graphiques</button>
+    </form>
+
+    <div id="chartsContainer" class="grid-container"></div>
+  </main>
+
+  <div id="footer"></div>
+  <script src="js/include-fragment.js"></script>
+  <script src="js/graphique.js"></script>
+
+</body>
+</html>

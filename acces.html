@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/Bouton.css">
+    <link rel="icon" href="image/Kirby.png" type="image/png">
+    <title>Mon site-> Accès</title>
+    
+</head>
+<body>
+<header class="header-title">
+  <div class="header-container">
+    <a href="https://soeman.fr/" target="_blank" class="logo"><img src="//tech-ethic.com/wp-content/uploads/2024/08/SoemanGroup_logo-principal_Web.png" alt="soeman_group" class="logo"></a>
+    <h1>Accès</h1>
+  </div>
+</header>
+<div id="nav"></div>
+
+<main>
+    <p style="text-align:center; margin:20px 0;">
+      Entrez une fois le mot de passe afin de le définir.
+    </p>
+
+    <!-- On encapsule les deux .container dans un flex parent -->
+    <div class="flex-containers">
+      <!-- Bloc pour l’Agenda -->
+      <div class="container">
+        <h2>Accès Agenda</h2>
+        <input type="password" id="motdepasseAgenda" placeholder="Entrez le mot de passe">
+        <button id="validerAgenda" onclick="verifierAcces('agenda')">Valider</button>
+        <p id="erreur_agenda" class="error"></p>
+
+        <h4>Changer le mot de passe</h4>
+        <input type="password" id="ancien_agenda" placeholder="Ancien mot de passe">
+        <input type="password" id="nouveau_agenda" placeholder="Nouveau mot de passe">
+        <button onclick="changerMotDePasse('agenda')">Changer</button>
+        <p id="changeErreur_agenda" class="error"></p>
+      </div>
+
+      <!-- Bloc pour le Bloc-note -->
+      <div class="container">
+        <h2>Accès Bloc-note</h2>
+        <input type="password" id="motdepasseBloc" placeholder="Entrez le mot de passe">
+        <button id="validerBloc" onclick="verifierAcces('bloc')">Valider</button>
+        <p id="erreur_bloc" class="error"></p>
+
+        <h4>Changer le mot de passe</h4>
+        <input type="password" id="ancien_bloc" placeholder="Ancien mot de passe">
+        <input type="password" id="nouveau_bloc" placeholder="Nouveau mot de passe">
+        <button onclick="changerMotDePasse('bloc')">Changer</button>
+        <p id="changeErreur_bloc" class="error"></p>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+  <script src="js/include-fragment.js"></script>
+  <script src="js/Mdp.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon site -> Contacts</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/tableau.css">
+    <link rel="icon" href="image/Kirby.png" type="image/png">
+
+</head>
+<body>
+
+<header class="header-title">
+  <div class="header-container">
+    <a href="https://soeman.fr/" target="_blank" class="logo"><img src="//tech-ethic.com/wp-content/uploads/2024/08/SoemanGroup_logo-principal_Web.png" alt="soeman_group" class="logo"></a>
+    <h1>Contacts</h1>
+  </div>
+</header>
+<div id="nav"></div>
+<main>
+<div style="margin: 20px;">
+    <button onclick="ouvrirPopup()">Ajouter un contact</button>
+    <button onclick="reinitialiserTableau()">Réinitialiser le tableau</button>
+    <input type="text" id="searchInput" placeholder="Rechercher..." oninput="filtrerTableau()">
+</div>
+
+
+<table id="contactsTable">
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Email</th>
+            <th>Numéro</th>
+            <td></td>
+        </tr>
+    </thead>
+<tbody id="tableBody">
+</tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="5">
+                Voici un <a href="https://www.youtube.com/watch?v=gJ_G-gxQRRk" target="_blank">tuto</a> utile
+                <a href="https://www.youtube.com/watch?v=gJ_G-gxQRRk" target="_blank">
+                    <img class="hover-img" src="https://i.ytimg.com/vi/LkZ-KqxgVQ4/hqdefault.jpg" alt="tuto" style="height:50px; vertical-align:middle; margin-left:10px;">
+                </a>
+            </td>
+        </tr>
+    </tfoot>
+</table>
+
+<div id="popupForm" class="popup">
+    <div class="popup-content">
+        <h2 id="formTitle">Ajouter un contact</h2>
+
+        <input type="text" id="prenomInput" placeholder="Prénom">
+
+        <input type="text" id="nomInput" placeholder="Nom" required>
+        
+        <input type="email" id="emailInput" placeholder="Email"
+       title="Veuillez entrer une adresse email valide" 
+       required>
+        
+        <input type="text" id="numeroInput" placeholder="Numéro"
+       pattern="[0-9 ]+" 
+       title="Seuls les chiffres et espaces sont autorisés" 
+       oninput="this.value = this.value.replace(/[^0-9 ]/g, '')"
+       required>
+
+        <div class="popup-buttons">
+            <button onclick="fermerPopup()">Annuler</button>
+            <button onclick="enregistrerContact()">Enregistrer</button>
+        </div>
+    </div>
+</div>
+</main>
+
+    <div id="footer"></div>
+    <script src="js/include-fragment.js"></script>
+    <script src="js/contact.js"></script>
+
+</body>
+</html>

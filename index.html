@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Mon site-> Accueil</title>
+    <link rel="icon" href="image/Kirby.png" type="image/png">
+
+</head>
+
+<body>
+  
+<header class="header-title">
+  <div class="header-container">
+    <a href="https://soeman.fr/" target="_blank" class="logo"><img src="//tech-ethic.com/wp-content/uploads/2024/08/SoemanGroup_logo-principal_Web.png" alt="soeman_group" class="logo"></a>
+    <h1>Page d'accueil</h1>
+  </div>
+    <!--
+  <div id="auth-container">
+  <input type="email" id="email" placeholder="Email" />
+  <input type="password" id="password" placeholder="Mot de passe" />
+  <button onclick="inscription(document.getElementById('email').value, document.getElementById('password').value)">Inscription</button>
+  <button onclick="connexion(document.getElementById('email').value, document.getElementById('password').value)">Connexion</button>
+  <button onclick="deconnexion()">Déconnexion</button>
+</div>
+-->
+</header>
+  <div id="nav"></div>
+
+<main>
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Bienvenue chez Soeman Group</h2>
+        <a href="https://soeman.fr/" target="_blank" class="btn-primary">Visitez notre site officiel</a>
+      </div>
+    </section>
+
+    <section class="features">
+      <h2>Nos atouts</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Gestion de contacts</h3>
+          <p>Centralisez et organisez toutes vos informations client en un seul endroit sécurisé.</p>
+          <img src="image/contact.png" alt="Contacts">
+        </div>
+        <div class="card">
+          <h3>Agenda & Calendrier</h3>
+          <p>Planifiez vos rendez-vous ainsi que tâches avec notre calendrier intuitif et personnalisable.</p>
+          <img src="image/agenda.png" alt="Agenda">
+        </div>
+
+        <div class="card">
+          <h3>Bloc-note intégré</h3>
+          <p>Notez toutes vos idées, sauvegardez automatiquement et retrouvez-les à tout moment.</p>
+          <img src="image/blocnote.png" alt="Bloc-note">
+        </div>
+
+        <div class="card">          
+          <h3>Statistiques avancées </h3>
+          <p>Analysez votre activité en temps réel grâce à des graphiques dynamiques et interactifs.</p>
+          <img src="image/stat.png" alt="Statistiques"y>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="mission">
+      <h2>Notre mission</h2>
+      <p>
+        Chez Soeman Group, nous croyons qu’une gestion d’entreprise efficace repose sur des outils simples, sécurisés et intégrés.  
+        Notre mission est de fournir une plateforme unique pour piloter l’ensemble de vos processus d’entreprise,  
+        tout en offrant une expérience utilisateur fluide et agréable.
+      </p>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+  <script src="js/include-fragment.js"></script>
+  <script src="js/auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"></script>
+
+</body>
+
+</html>
